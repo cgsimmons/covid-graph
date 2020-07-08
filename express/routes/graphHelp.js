@@ -5,7 +5,7 @@ const {
 } = require('../../src/consts');
 
 router.get('/', async (req, res) => {
-  res.send(`call '/stats' with any of the following optional parameters ${JSON.stringify(DEFAULT_ARGS)}`);
+  res.send(`Help: call '/graph' with any of the following optional query parameters: \n${Object.entries(DEFAULT_ARGS).map(([key, value]) => `    ${key}:  ${value}`).join('\n')}`);
 });
 
 module.exports = router;
