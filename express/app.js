@@ -1,6 +1,5 @@
 const createError = require('http-errors');
 const express = require('express');
-const path = require('path');
 const serverless = require('serverless-http');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -11,17 +10,13 @@ const graphHelpRouter = require('./routes/graphHelp');
 
 var app = express();
 
-// view engine setup
-app.engine('pug', require('pug').__express)
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-
+// middleware
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
+// dem routes
 app.use('/graph/help', graphHelpRouter);
 app.use('/graph', graphRouter);
 app.use('/', indexRouter);
@@ -37,14 +32,14 @@ app.use(function(_req, _res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.send('You fucked up hommie');
 });
 
 module.exports = app;

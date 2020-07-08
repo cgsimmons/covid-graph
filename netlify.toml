@@ -1,3 +1,23 @@
 [build]
   command = "npm install && npm run build"
   functions = "functions"
+
+[[redirects]]
+  from = "/graph/help"
+  to = "/.netlify/functions/app/graph/help"
+  query = {days = ":days", height = ":height", country = ":country", disableCases =  ":disableCases", disableRecovered = ":disableRecovered", disableDeaths = ":disableDeaths"}
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/graph"
+  to = "/.netlify/functions/app/graph"
+  query = {days = ":days", height = ":height", country = ":country", disableCases =  ":disableCases", disableRecovered = ":disableRecovered", disableDeaths = ":disableDeaths"}
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/app"
+  status = 200
+  force = true
