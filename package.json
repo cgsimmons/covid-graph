@@ -4,7 +4,9 @@
   "description": "ASCII graph for covid data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run covid-graph",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "covid-graph": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,10 +24,10 @@
   "bugs": {
     "url": "https://github.com/cgsimmons/covid-graph/issues"
   },
-  "type": "module",
   "homepage": "https://github.com/cgsimmons/covid-graph#readme",
   "dependencies": {
     "asciichart": "^1.5.21",
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "commander": "^5.1.0"
   }
 }
