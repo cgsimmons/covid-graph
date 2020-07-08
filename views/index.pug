@@ -6,13 +6,8 @@ block content
   
   h2 cURL
   p 
-    | Simply curl the `/stats` path with any of the optional parameters.
-    | days = number of days to look back for data collection (x axis)
-    | height = number of rows for y axis
-    | country = name or country code of desired data
-    | disableCases = remove total cases from data results
-    | disableRecoveries = remove recovery case data
-    | disableDeaths = remove death data
+    | Simply curl the `/graph` path with any of the optional parameters.
+
   h3 Options
   ul 
     li days: Number of days before the current day to start collecting data (x axis)
@@ -23,8 +18,8 @@ block content
     li disableDeaths: Remove deaths data from results
   h3 Examples
   ul
-    li `curl "http://covid-graph.csimmons.dev/stats"`
-    li `curl "http://covid-graph.csimmons.dev/stats?days=10&height=10&disableCases=true&disableRecovered=true&country=Japan"`
+    li curl "http://covid-graph.csimmons.dev/graph"
+    li curl "http://covid-graph.csimmons.dev/graph?days=10&height=10&disableCases=true&disableRecovered=true&country=Japan"
 
   h2 CLI
   p 

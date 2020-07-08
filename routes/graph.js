@@ -19,19 +19,4 @@ router.get('/', async (req, res) => {
   res.send(response);
 });
 
-/* GET users listing. */
-router.get('/help', async (req, res) => {
-  const response = await covidGraph.plot( 
-    {
-      ...DEFAULT_ARGS, 
-      ...req.query, 
-      disableCases: (req.query.disableCases || '').toLowerCase() === 'true', 
-      disableRecovered: (req.query.disableRecovered || '').toLowerCase() === 'true', 
-      disableDeaths: (req.query.disableDeatjs || '').toLowerCase() === 'true', 
-    }
-  );
-
-  res.send(`call '/stats' with any of the following optional parameters ${JSON.stringify(DEFAULT_ARGS)}`);
-});
-
 module.exports = router;
