@@ -5,22 +5,22 @@ const serverless = require('serverless-http');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const indexRouter = require('../routes/index');
-const graphRouter = require('../routes/graph');
-const graphHelpRouter = require('../routes/graphHelp');
+const indexRouter = require('./routes/index');
+const graphRouter = require('./routes/graph');
+const graphHelpRouter = require('./routes/graphHelp');
 
 var app = express();
 
 // view engine setup
 app.engine('pug', require('pug').__express)
-app.set('views', path.join(__dirname, '../views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/graph/help', graphHelpRouter);
 app.use('/graph', graphRouter);

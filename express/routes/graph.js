@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const covidGraph = require('../src/covidGraph');
+const covidGraph = require('../../src/covidGraph');
 const {
   DEFAULT_ARGS
-} = require('../src/consts');
+} = require('../../src/consts');
 
 /* GET users listing. */
 router.get('/', async (req, res) => {
