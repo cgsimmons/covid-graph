@@ -9,20 +9,18 @@ module.exports.plot = async ({height, days, disableCases, disableDeaths, disable
         disableDeaths ? []: Object.values(data.timeline.deaths),
     ].filter(list => list.length);
 
-    console.log(asciichart.plot(lists, {
+    let response = asciichart.plot(lists, {
         height,
         colors: [
             disableCases ? '' : asciichart.blue,
             disableRecovered ? '': asciichart.green,
             disableDeaths ? '': asciichart.red
         ].filter(color => color)
-    }));
+    });
     const graphs = [disableCases, disableRecovered, disableDeaths].filter(graph => !graph).length;
-    console.log('%s: %s%s%sin last %s days', 
-        country,
-        disableCases ? '' : `${asciichart.blue}TotalCases${noColor}${graphs === 3 ? ',' : graphs === 2 ? ' and ' : ''} `,
-        disableRecovered ? '' : `${asciichart.green}Recovered${noColor}${!disableDeaths ? ' and' : ''} `,
-        disableDeaths ? '' : `${asciichart.red}Deaths${noColor} `,
-        days
-    );
+    const casesString = disableCases ? '' : `${asciichart.blue}TotalCases${noColor}${graphs === 3 ? ',' : graphs === 2 ? ' and ' : ''} `;
+    const recoveredString = disableRecovered ? '' : `${asciichart.green}Recovered${noColor}${!disableDeaths ? ' and' : ''} `;
+    const deathsString = disableDeaths ? '' : `${asciichart.red}Deaths${noColor} `;
+    response += `\n${country}: ${casesString}${recoveredString}${deathsString}in the last ${days} days`;
+    return response;
 };

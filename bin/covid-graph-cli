@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const covidGraph = require('../src/covidGraph');
+const args = require('../src/arguments.js');
+
+const printGraph = async () => {
+    const result = await covidGraph.plot(args);
+ console.log(result);
+};
+
+printGraph();
