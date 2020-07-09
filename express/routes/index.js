@@ -41,8 +41,8 @@ const index = `
 `;
 
 /* GET home page. */
-router.get('/*', function(_req, res) {
-  res.send(index);
+router.get('/*', function (_req, res) {
+    res.send(index);
 });
 
 module.exports = router;

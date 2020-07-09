@@ -4,5 +4,5 @@ exports.DEFAULT_ARGS = {
     country: 'US',
     disableCases: false,
     disableRecovered: false,
-    disableDeaths: false
-}
+    disableDeaths: false,
+};

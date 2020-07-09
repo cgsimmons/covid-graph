@@ -5,7 +5,7 @@ const args = require('../src/arguments.js');
 
 const printGraph = async () => {
     const result = await covidGraph.plot(args);
- console.log(result);
+    console.log(result);
 };
 
 printGraph();
