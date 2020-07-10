@@ -30,10 +30,6 @@ ASCII graph data for COVID-19. A nice way to get current Coronavirus data in you
 -   disableRecovered: Remove recovered case data from results
 -   disableDeaths: emove deaths data from results
 
-## Additional Details
-
-This is setup to support lambda functions as a stateless service. This is accomplished via a combination of serverless-http along with netlify-lambda. The netlify.toml designates the build process and redirects required for lambda routes deployment on netlify.
-
 ## Examples
 
 -   `curl "https://covid-graph.cgsimmons.dev/graph?disableCases=true&disableRecovered=true"`
@@ -43,3 +39,12 @@ This is setup to support lambda functions as a stateless service. This is accomp
 -   `curl "https://covid-graph.cgsimmons.dev/graph?country=Japan&height=15"`
 
     ![US: Deaths in the last 60 days](assets/japan-all.png)
+
+## Additional Details
+
+This is setup to support lambda functions as a stateless service. This is accomplished via a combination of serverless-http along with netlify-lambda. The netlify.toml designates the build process and redirects required for lambda routes deployment on netlify.
+
+## Resources
+
+-   [disease.sh](https://github.com/disease-sh/API) - Covid data API
+-   [asciichart](https://github.com/kroitor/asciichart) - ASCII chart generation

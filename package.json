@@ -1,7 +1,9 @@
 {
     "name": "covid-graph",
     "version": "1.0.0",
-    "private": true,
+    "author": "Chris Simmons",
+    "licencse": "MIT",
+    "private": false,
     "scripts": {
         "build": "netlify-lambda build express",
         "start": "DEBUG=covid-graph:server nodemon ./bin/www"
