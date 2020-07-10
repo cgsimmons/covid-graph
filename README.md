@@ -4,8 +4,8 @@ ASCII graph data for COVID-19. A nice way to get current Coronavirus data in you
 
 ## Live
 
--   [https://www.covid-graph.cgsimmons.dev](https://www.covid-graph.cgsimmons.dev)
--   `curl "https://www.covid-graph.cgsimmons.dev/graph"`
+-   [https://covid-graph.cgsimmons.dev](https://www.covid-graph.cgsimmons.dev)
+-   `curl "https://covid-graph.cgsimmons.dev/graph"`
 
 ## Local Setup
 

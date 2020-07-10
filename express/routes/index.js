@@ -31,8 +31,8 @@ const index = `
             </ul>
             <h3>Examples</h3>
             <ul>
-                <li>curl "http://covid-graph.csimmons.dev/graph"</li>
-                <li>curl "http://covid-graph.csimmons.dev/graph?days=10&height=10&disableCases=true&disableRecovered=true&country=Japan"</li>
+                <li>curl "https://covid-graph.cgsimmons.dev/graph"</li>
+                <li>curl "https://covid-graph.cgsimmons.dev/graph?days=10&height=10&disableCases=true&disableRecovered=true&country=Japan"</li>
             </ul>
             <div class="highlight-inner"><h2>CLI</h2></div>
             <p>  Covid-Graph is built in node and available on github. Within the codebase is a covid-graph-cli command that can be used to generate the graph data locally. Visit the repo on <a href="https://github.com/cgsimmons/covid-graph">github </a>for more info.</p>
