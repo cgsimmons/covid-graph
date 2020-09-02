@@ -3,7 +3,7 @@ const router = express.Router();
 const covidGraph = require('../../src/covidGraph');
 const { DEFAULT_ARGS } = require('../../src/consts');
 
-/* GET users listing. */
+/* GET plot data. */
 router.get('/', async (req, res) => {
     const response = await covidGraph.plot({
         ...DEFAULT_ARGS,
