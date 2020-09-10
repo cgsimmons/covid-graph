@@ -42,7 +42,7 @@ ASCII graph data for COVID-19. A nice way to get current Coronavirus data in you
 
 ## Additional Details
 
-This is setup to support lambda functions as a stateless service. This is accomplished via a combination of serverless-http along with netlify-lambda. The netlify.toml designates the build process and redirects required for lambda routes deployment on netlify.
+This setup supports lambda functions as a stateless service. This is accomplished via a combination of serverless-http along with netlify-lambda. The netlify.toml designates the build process and redirects required for lambda routes deployment on netlify. The libraries allow constructing a standard node app, but then wraps the routes to be used for lambda. Win-Win.
 
 ## Resources
 
