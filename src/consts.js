@@ -5,4 +5,5 @@ exports.DEFAULT_ARGS = {
     disableCases: false,
     disableRecovered: false,
     disableDeaths: false,
+    disableBox: false,
 };
