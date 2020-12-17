@@ -25,6 +25,7 @@ param
     .option('-R --no-recovered', 'Disable recoveries')
     .option('-D --no-deaths', 'Disable deaths')
     .option('-C --no-cases', 'Disable total cases')
+    .option('-B --no-box', 'Disable graph enclosing box')
     .parse(process.argv);
 
 module.exports = {
@@ -34,4 +35,5 @@ module.exports = {
     disableCases: param.cases === false,
     disableRecovered: param.recovered === false,
     disableDeaths: param.deaths === false,
+    disableBox: param.box === false,
 };

@@ -28,6 +28,7 @@ const index = `
                 <li>disableCases: Remove total case data from results</li>
                 <li>disableRecovered: Remove recovered case data from results</li>
                 <li>disableDeaths: Remove deaths data from results</li>
+                <li>disableBox: Remove enclosing graph box for simpler display</li>
             </ul>
             <h3>Examples</h3>
             <ul>

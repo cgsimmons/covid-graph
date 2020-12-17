@@ -30,6 +30,17 @@ ASCII graph data for COVID-19. A nice way to get current Coronavirus data in you
 -   disableRecovered: Remove recovered case data from results
 -   disableDeaths: emove deaths data from results
 
+## Command Line Options
+
+-  -d, --days <number>    number of days the chart will go back (default: 60)
+-  -c, --country <name>   target country (country name, iso2, iso3, or country ID code) (default: "US")
+-  -h, --height <number>  max terminal chart height (default: 25)
+-  -R --no-recovered      Disable recoveries
+-  -D --no-deaths         Disable deaths
+-  -C --no-cases          Disable total cases
+-  -B --no-box            Disable graph enclosing box
+-  --help                 display help for command
+
 ## Examples
 
 -   `curl "https://covid-graph.cgsimmons.dev/graph?disableCases=true&disableRecovered=true"`
