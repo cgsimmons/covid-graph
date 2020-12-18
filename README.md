@@ -28,7 +28,8 @@ ASCII graph data for COVID-19. A nice way to get current Coronavirus data in you
 -   country: Target country name or code
 -   disableCases: Remove total case data from results
 -   disableRecovered: Remove recovered case data from results
--   disableDeaths: emove deaths data from results
+-   disableDeaths: Remove deaths data from results
+-   disableBox: Remove graph enclosing box
 
 ## Command Line Options
 
